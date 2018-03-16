@@ -1,0 +1,166 @@
+/*GENERAL -------------------------------------- */
+
+body {
+	background-color: #e5494e;
+}
+
+.container {
+	position: relative;
+}
+
+.main-block {
+	border: 1px solid #ededed;
+	background-color: white;
+	border-radius: 10px;
+	position: relative;
+	top: 100px;
+	padding-top: 40px;
+}
+
+/* NAVIGATION BAR -------------------------------------- */
+
+.link-color {
+	color: white;
+}
+
+/*TO DO SECTION -------------------------------------- */
+
+
+.tasks {
+	padding-top: 40px;
+	padding: 10px;
+	height: 100%;
+}
+
+.title {
+	padding: 10px;
+}
+
+.date {
+	padding: 10px;
+}
+
+.priority p {
+	padding: 10px;
+	padding-top: 15px;
+	margin-left: -40px;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+.line {
+	width: 95%;
+	margin: 0 auto;
+	border-bottom: 1px solid #ededed;
+	margin-bottom: 10px;
+}
+
+.checkbox-container {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+	cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide browser default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 35px;
+    width: 35px;
+    border-radius: 25px;
+    border: 2px solid #ededed;
+    background-color: white;
+}
+
+/* empty checkbox container -> on hover */
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ededed;
+}
+
+/* checkbox when checked*/
+.checkbox-container input:checked ~ .checkmark {
+	border-color: #666666;
+    background-color: #666666;
+}
+
+/* this is to create the checkmark */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* show checkmark when box is checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* checkmark styling */
+.checkbox-container .checkmark:after {
+    left: 15px;
+    top: -12px;
+    width: 20px;
+    height: 40px;
+    border: solid white;
+    border-radius: 2px;
+    border-width: 0 6px 6px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.editing {
+	display: none;
+}
+
+
+
+/* button for new tasks*/
+.btn-new-task {
+	margin-top: 30px;
+	width: 100%;
+}
+
+/*LISTS SECTION -------------------------------------- */
+
+/*list section */
+.lists {
+	padding: 10px;
+	height: 100%;
+	border-right: 1px solid #ededed;
+}
+
+.lists p {
+	padding-left: 40px;
+}
+
+.lists li {
+	padding-bottom: 10px;
+	list-style: none;
+}
+
+/*link to adding new list */
+#new-list {
+	padding-top: 100px;
+	padding-left: 40px;
+}
+
+/*MODAL STYLING -------------------- */
+
+#task-input {
+	width: 100%;
+}

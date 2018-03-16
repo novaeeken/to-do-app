@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <title> Best to do list ever: Interactive online to do list </title>
+		<meta name="description" content="This amazing to do list is better than every list you ever had. It's just great. It's made by the best developers. We made the best application. It's true.">
+		<link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <!-- <link rel="icon" type="image/png" href="./images/icon.png" sizes="32x32"> -->
+
+	</head>
+
+	<body>
+
+		<!-- NAVIGATION -->
+		<nav class="navbar navbar-expand-lg fixed-top">
+			<div class="container">
+				<a class="navbar-brand link-color" href="/"><strong>Best to do list ever</strong></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcontent" aria-controls="navbarcontent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+	  		</button>
+
+				<div class="collapse navbar-collapse" id="navbarcontent">
+	      	<div class="navbar-nav ml-auto">
+	      		<a class="nav-item nav-link link-color active" href="#">About<span class="sr-only">(current)</span></a>
+	      		<a class="nav-item nav-link link-color" href="#">Tips</a>
+	        	<button class="btn btn-outline-light link-color" id="btn-contact" type="submit">Log in</button>
+	      	</div>
+    		</div>
+    	</div>
+		</nav>
+		
+		<!-- MAIN BLOCK -->
+		<div class="container">
+			<div class="main-block">
+    		<div class="row">
+					
+					<!-- LEFT SECTION  -->
+        	<div class="col-sm-3">
+        		<section class="lists">
+        			<p><strong> Lists </strong></p>
+	            <ul>
+	            	<li> To do list </li>
+	            	<li> Work stuff </li>
+	            </ul>
+	            <a href="#" id="new-list"> + New List </a>
+          </section>
+        </div>
+
+				<!-- RIGHT SECTION -->
+        <div class="col-sm-9">
+						<section class="tasks">
+            
+            <!-- tasks -->
+            	<article class="single-to-do" >
+            		<div class="row">
+            			<div class="col-sm-1 check">
+            				<label class="checkbox-container">
+            					<input type="checkbox">
+            					<span class="checkmark"></span>
+            				</label>
+            			</div>
+            			<div class="col-sm-8 title">
+            				<p class="task-text" value="">Buy organic vegetables for boyfriend</p>
+            			</div>
+            			<div class="col-sm-2 date"> today </div>
+            			<div class="col-sm-1 priority"> <p> high</p> </div>
+            		</div>
+            		<div class="line"> </div>
+            	</article>
+
+            	<article class="single-to-do" >
+            		<div class="row">
+            			<div class="col-sm-1 check">
+            				<label class="checkbox-container">
+            					<input type="checkbox">
+            					<span class="checkmark"></span>
+            				</label>
+            			</div>
+            			<div class="col-sm-8 title">
+            				<p class="task-text" value="">Call my parents about watering the plants</p>
+            			</div>
+            			<div class="col-sm-2 date"> 17-03-2018 </div>
+            			<div class="col-sm-1 priority"> <p>low</p> </div>
+            		</div>
+            		<div class="line"> </div>
+            	</article>
+
+							<article class="single-to-do" >
+            		<div class="row">
+            			<div class="col-sm-1 check">
+            				<label class="checkbox-container">
+            					<input type="checkbox" checked="checked">
+            					<span class="checkmark"></span>
+            				</label>
+            			</div>
+            			<div class="col-sm-8 title">
+            				<p class="task-text" value="">Remind Carry that she should't take her red coat on the trip</p>
+            			</div>
+            			<div class="col-sm-2 date"> 23-03-2018 </div>
+            			<div class="col-sm-1 priority"> <p>low</p> </div>
+            		</div>
+            		<div class="line"> </div>
+            	</article>
+
+            </section>
+						
+						<!-- ADD TASK BUTTON  -->
+            <div class="row">
+            	<div class="col-sm-3 offset-sm-9">
+            		<!-- button to trigger the modal -->
+								<button type="button" class="btn btn-light btn-new-task" data-toggle="modal" data-target=".new-to-do"><i class="fa fa-plus"></i> Add new task </button>
+            	</div>
+            </div>
+
+					</div>
+        </div>
+    	</div>
+		</div>
+	
+	<!-- MODAL -->
+	<div class="modal fade new-to-do" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+	    	
+	    	<div class="modal-body">
+	        <form action="">
+	        	<div class="form-group">
+      		  	<label for="task-input"></label>
+      		  	<input type="text" class="form-control" id="task-input" name="task" placeholder="Insert your task here, e.g. cleaning the house">
+	        	</div>
+	        	<div class="form-group">
+					    <label for="priority-pick">Priority</label>
+					    <select class="form-control" id="priority-pick">
+					      <option>low</option>
+					      <option>medium</option>
+					      <option>high</option>
+					    </select>
+					  </div>
+	        </form>
+	      </div>
+
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" id="btn-add-task" data-dismiss="modal">Add to list</button>
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+	      </div>
+	  	</div>
+		</div>
+	</div>
+	<!-- END OF MODAL -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+		<script src="./js/bootstrap.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+
+</html>
